@@ -2,17 +2,21 @@ import java.util.Scanner;
 
 public class Main{
 	public static void main(String[] args){
-		System.out.print("入力:");
+		int sinntyou,taizyuu;
+		double keisannSinntyou,BMI;
 		Scanner scanner = new Scanner(System.in);
-		int sinntyou = scanner.nextInt();
-		double keisannSinntyou = (double)sinntyou / 100;
-		System.out.print("入力:");
-		int taizyuu = scanner.nextInt();
+		for(int a = 0;a < 2;a ++){
+			System.out.print("入力:");
+			sinntyou = scanner.nextInt();
+			keisannSinntyou = (double)sinntyou / 100;
+			System.out.print("入力:");
+			taizyuu = scanner.nextInt();
+			BMI = taizyuu / (keisannSinntyou * keisannSinntyou);
+			BMI *= 100;
+			BMI = (int)BMI;
+			BMI /= 100;
+			System.out.println(BMI);
+		}
 		scanner.close();
-		double BMI = taizyuu / (keisannSinntyou * keisannSinntyou);
-		BMI *= 100;
-		BMI = (int)BMI;
-		BMI /= 100;
-		System.out.println(BMI);
 	}
 }
